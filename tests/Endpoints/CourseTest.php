@@ -428,7 +428,7 @@ class CourseTest extends AbstractReadWriteEndpoint
 
         $newCourse = $this->rolloverCourse([
             'id' => $course['id'],
-            'year' => 2023,
+            'year' => 2024,
         ]);
 
         $newSessionIds = $newCourse['sessions'];
