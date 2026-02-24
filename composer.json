@@ -32,7 +32,7 @@
     "jaybizzle/crawler-detect": "^1.2",
     "league/flysystem": "^3.0",
     "league/flysystem-aws-s3-v3": "^3.0",
-    "liip/monitor-bundle": "^2.6",
+    "liip/monitor-bundle": "dev-replace-deprecated-xml",
     "nelmio/api-doc-bundle": "^5.0",
     "nelmio/cors-bundle": "^2.0",
     "opensearch-project/opensearch-php": "^2.0",
@@ -88,6 +88,9 @@
     "symfony/web-profiler-bundle": "7.4.*"
   },
   "config": {
+    "audit": {
+      "ignore": ["PKSA-y2cr-5h3j-g3ys"]
+    },
     "platform": {
       "php": "8.4"
     },
@@ -158,5 +161,20 @@
       "require": "7.4.*",
       "docker": false
     }
-  }
+  },
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "liip/monitor-bundle",
+        "version": "dev-replace-deprecated-xml",
+        "type": "package",
+        "source": {
+          "url": "https://github.com/HecFranco/LiipMonitorBundle",
+          "type": "git",
+          "reference": "feature/replace-deprecated-xml"
+        }
+      }
+    }
+  ]
 }
