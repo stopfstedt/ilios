@@ -25,7 +25,7 @@ class UserPreference implements UserPreferenceInterface
     #[Assert\Length(min: 1, max: 65000)]
     protected string $json;
 
-    #[ORM\ManyToOne(targetEntity: User::class)]
+    #[ORM\OneToOne(targetEntity: User::class)]
     #[ORM\JoinColumn(name: 'user_id', referencedColumnName: 'user_id')]
     #[ORM\Id]
     #[IA\Expose]
